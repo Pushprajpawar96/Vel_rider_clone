@@ -82,7 +82,18 @@ const LoginUser = async (req, res) => {
         console.log("error",error);
       return ErrorHandler(res, 400, error)
     }
-  }
+}
+
+const UpdateProfile = async (req,res) =>{
+    try {
+        
+        return ResponseOk(res, 200, "Profile updated successfully", req.body);
+    } catch (error) {
+        console.log("error",error);
+        return ErrorHandler(res, 400, error.message);
+    }
+}
+
 
 module.exports = {
     UserRegister,

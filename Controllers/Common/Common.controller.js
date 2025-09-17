@@ -3,7 +3,6 @@ const db = require('../../Models/Config/db.config');
 const Static_Data = db.static_data;
 
 const GetStaticData = async (req,res) =>{
-    console.log("hello");
     try { 
         const data = await Static_Data.findAll({
             where:{
